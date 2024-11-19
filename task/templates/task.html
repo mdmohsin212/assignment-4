@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Task</title>
+{% endblock title %}
+{% block content %}
+  <form class="w-50 m-auto" method="post">
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+    {{form|crispy}}
+    <button class="btn btn-success" type="submit" >Submit</button>
+  </form>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Category</title>
+{% endblock title %}
+{% block content %}
+  <form method="post" class="w-50 m-auto p-3">
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+    {{form|crispy}}
+    <button class="btn btn-success">Submit</button>
+  </form>
+{% endblock content %}
